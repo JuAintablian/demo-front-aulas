@@ -1,0 +1,11 @@
+<div class="container">
+    <app-filho [nome]="nomeSaindoDoPai" (evento)="receberEvento($event)"></app-filho>
+
+    <button class="btn btn-primary mt-5" (click)="mudarEstado()">Mostrar Lista</button>
+    <div *ngIf="condicao" >
+        <ul *ngFor="let item of lista" class="mt-5">
+            <li>{{ item.id }} - {{ item.nome | uppercase }} - {{ item.idade }} Vende por: {{ item.precoProduto | currency: 'BRL' }}  }}</li>
+        </ul>
+    </div>
+
+</div>

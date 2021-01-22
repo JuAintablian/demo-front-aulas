@@ -1,0 +1,18 @@
+<div class="container collor">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="mb-3 pb">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" [value]="nome" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <button class="btn btn-primary mb-2" (click)="monstrarDataBinding()" >Mostrar Data Binding</button>
+        </div>
+        <div class="col-lg-6">
+            <div class="mb-3 pb">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" [(ngModel)]="nomeTwoBinding" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <button class="btn btn-primary mb-2" (click)="monstrarTwoWayDataBinding()" >Mostrar Two-Way Data Binding</button>
+        </div>
+    </div>
+</div>
