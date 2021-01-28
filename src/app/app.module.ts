@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponenteUmComponent } from './componente-um/componente-um.component';
 import { BindingComponent } from './binding/binding.component';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PaiComponent } from './pai/pai.component';
 import { FilhoComponent } from './filho/filho.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { FilhoComponent } from './filho/filho.component';
     BindingComponent,
     PaiComponent,
     FilhoComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    AppRoutingModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
