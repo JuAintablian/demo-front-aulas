@@ -1,0 +1,22 @@
+<form [formGroup]="formulario">
+  <input placeholder="Nome" formControlName="nome" />
+  <input placeholder="Idade" formControlName="idade" />
+  <input placeholder="Cidade" formControlName="cidade" />
+  <input placeholder="Estado" formControlName="estado" />
+</form>
+<button (click)="enviarFormulario()" [disabled]="formulario.invalid">Enviar</button>
+<button (click)="resgatarFormulario()">Preencher</button>
+<button (click)="verificarIdade()">Idade</button>
+
+<nav>
+  <ul *ngFor="let item of cadastro" >
+    <li class="">{{ item.nome }}</li>
+    <li>{{ item.idade }}</li>
+    <li>{{ item.cidade }}</li>
+    <li>{{ item.estado }}</li>
+    <button (click)="excluir(item.id)">Excluir</button>
+  </ul>
+</nav>
+
+<p *ngIf="isMaiorIdade">É maior de idade</p>
+<p *ngIf="!isMaiorIdade">É menor de idade</p>
