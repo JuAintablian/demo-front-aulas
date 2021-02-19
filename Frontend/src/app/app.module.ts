@@ -11,6 +11,8 @@ import { PaiComponent } from './pai/pai.component';
 import { FilhoComponent } from './filho/filho.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
+import { ValditorDirective } from './diretivas/valditor.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     PaiComponent,
     FilhoComponent,
     FormularioComponent,
+    TemplateDrivenComponent,
+    ValditorDirective,
+    ValditorDirective,
   ],
   imports: [
     BrowserModule,

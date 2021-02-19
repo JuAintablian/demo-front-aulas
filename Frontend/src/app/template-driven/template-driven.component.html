@@ -1,0 +1,19 @@
+<form class="g-3 mt-5" #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+  <div class="mb-3 row">
+    <label for="nome" class="ml-5 col-form-label">Nome</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control-{{ nomeValid }}" id="nome" name="nome" #nome="ngModel" 
+      [ngModel]="cadastro.nome" 
+      required maxlength="25"> 
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputEmail" class="ml-5 col-form-label">Email</label>
+    <div class="col-lg-6">
+      <input type="email" class="form-control" id="inputEmail" name="email" [ngModel]="cadastro.email" required email>
+    </div>
+  </div>
+  <div class="mb-3 ml-5 row">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+</form>
